@@ -9,7 +9,7 @@ set -e
 
 export RACK_ENV=${RACK_ENV:-"production"}
 
-echo "---> CUSTOM S2I RUN COMPLETE"
+echo "---> CUSTOM S2I RUN COMPLETE" >/tmp/test.txt
 
 if is_puma_installed; then
   exec bundle exec "puma --config ../etc/puma.cfg"
